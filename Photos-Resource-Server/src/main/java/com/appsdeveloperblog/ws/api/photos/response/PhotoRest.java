@@ -1,100 +1,95 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.appsdeveloperblog.ws.api.photos.response;
 
 public class PhotoRest {
-    private String userId;
-    private String photoId;
-    private String albumId;
-    private String photoTitle;
-    private String photoDescription;
-    private String photoUrl;
+      private String userId;
+      private String photoId;
+      private String albumId;
+      private String photoTitle;
+      private String photoDescription;
+      private String photoUrl;
 
-    /**
-     * @return the userId
-     */
-    public String getUserId() {
-        return userId;
-    }
+      /**
+       * @return the userId
+       */
+      public String getUserId() {
+            return userId;
+      }
 
-    /**
-     * @param userId the userId to set
-     */
-    public void setUserId(String userId) {
-        this.userId = userId;
-    }
-    
-    /**
-     * @return the photoId
-     */
-    public String getPhotoId() {
-        return photoId;
-    }
+      /**
+       * @param userId the userId to set
+       */
+      public void setUserId(String userId) {
+            this.userId = userId;
+      }
 
-    /**
-     * @param photoId the photoId to set
-     */
-    public void setPhotoId(String photoId) {
-        this.photoId = photoId;
-    }
+      /**
+       * @return the photoId
+       */
+      public String getPhotoId() {
+            return photoId;
+      }
 
-    /**
-     * @return the albumId
-     */
-    public String getAlbumId() {
-        return albumId;
-    }
+      /**
+       * @param photoId the photoId to set
+       */
+      public void setPhotoId(String photoId) {
+            this.photoId = photoId;
+      }
 
-    /**
-     * @param albumId the albumId to set
-     */
-    public void setAlbumId(String albumId) {
-        this.albumId = albumId;
-    }
+      /**
+       * @return the albumId
+       */
+      public String getAlbumId() {
+            return albumId;
+      }
 
-    /**
-     * @return the photoTitle
-     */
-    public String getPhotoTitle() {
-        return photoTitle;
-    }
+      /**
+       * @param albumId the albumId to set
+       */
+      public void setAlbumId(String albumId) {
+            this.albumId = albumId;
+      }
 
-    /**
-     * @param photoTitle the photoTitle to set
-     */
-    public void setPhotoTitle(String photoTitle) {
-        this.photoTitle = photoTitle;
-    }
+      /**
+       * @return the photoTitle
+       */
+      public String getPhotoTitle() {
+            return photoTitle;
+      }
 
-    /**
-     * @return the photoDescription
-     */
-    public String getPhotoDescription() {
-        return photoDescription;
-    }
+      /**
+       * @param photoTitle the photoTitle to set
+       */
+      public void setPhotoTitle(String photoTitle) {
+            this.photoTitle = photoTitle;
+      }
 
-    /**
-     * @param photoDescription the photoDescription to set
-     */
-    public void setPhotoDescription(String photoDescription) {
-        this.photoDescription = photoDescription;
-    }
+      /**
+       * @return the photoDescription
+       */
+      public String getPhotoDescription() {
+            return photoDescription;
+      }
 
-    /**
-     * @return the photoUrl
-     */
-    public String getPhotoUrl() {
-        return photoUrl;
-    }
+      /**
+       * @param photoDescription the photoDescription to set
+       */
+      public void setPhotoDescription(String photoDescription) {
+            this.photoDescription = photoDescription;
+      }
 
-    /**
-     * @param photoUrl the photoUrl to set
-     */
-    public void setPhotoUrl(String photoUrl) {
-        this.photoUrl = photoUrl;
-    }
+      /**
+       * @return the photoUrl
+       */
+      public String getPhotoUrl() {
+            return photoUrl;
+      }
+
+      /**
+       * @param photoUrl the photoUrl to set
+       */
+      public void setPhotoUrl(String photoUrl) {
+            this.photoUrl = photoUrl;
+      }
 
 }
