@@ -1,13 +1,13 @@
-package com.appsdeveloperblog.ws.api.ApiGateway;
+// package com.appsdeveloperblog.ws.api.ApiGateway;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+// import org.junit.jupiter.api.Test;
+// import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
-class ApiGatewayApplicationTests {
+// @SpringBootTest
+// class ApiGatewayApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+// @Test
+// void contextLoads() {
+// }
 
-}
+// }

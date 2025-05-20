@@ -1,4 +1,4 @@
-package com.appsdeveloperblog.ws.api.albums;
+package com.appsdeveloperblog.ws.api.Albums;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

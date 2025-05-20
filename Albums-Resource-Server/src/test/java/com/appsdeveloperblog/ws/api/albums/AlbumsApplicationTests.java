@@ -1,4 +1,4 @@
-package com.appsdeveloperblog.ws.api.albums;
+package com.appsdeveloperblog.ws.api.Albums;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
