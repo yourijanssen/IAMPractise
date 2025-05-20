@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.3.2.RELEASE</version>
+		<version>3.4.5</version>
 		<relativePath />
 		<!-- lookup parent from repository -->
 	</parent>
@@ -14,10 +14,22 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>ResourceServer</name>
 	<description>Demo project for Spring Boot</description>
-
+	<url/>
+	<licenses>
+		<license/>
+	</licenses>
+	<developers>
+		<developer/>
+	</developers>
+	<scm>
+		<connection/>
+		<developerConnection/>
+		<tag/>
+		<url/>
+	</scm>
 	<properties>
-		<java.version>11</java.version>
-		<spring-cloud.version>Hoxton.SR7</spring-cloud.version>
+		<java.version>17</java.version>
+		<spring-cloud.version>2024.0.1</spring-cloud.version>
 	</properties>
 
 	<dependencies>
@@ -38,10 +50,10 @@
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-netflix-eureka-client -->
-		<!-- <dependency>
+		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-		</dependency> -->
+		</dependency>
 
 		<!-- <dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -56,7 +68,7 @@
 		</dependency> -->
 	</dependencies>
 
-	<!-- <dependencyManagement>
+	<dependencyManagement>
 		<dependencies>
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
@@ -66,7 +78,7 @@
 				<scope>import</scope>
 			</dependency>
 		</dependencies>
-	</dependencyManagement> -->
+	</dependencyManagement>
 
 
 	<build>
