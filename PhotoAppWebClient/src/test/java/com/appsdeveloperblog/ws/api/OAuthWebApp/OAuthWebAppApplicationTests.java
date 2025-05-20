@@ -1,10 +1,10 @@
-package com.appsdeveloperblog.ws.clients;
+package com.appsdeveloperblog.ws.api.OAuthWebApp;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class PhotoAppWebClientApplicationTests {
+class OAuthWebAppApplicationTests {
 
 	@Test
 	void contextLoads() {
