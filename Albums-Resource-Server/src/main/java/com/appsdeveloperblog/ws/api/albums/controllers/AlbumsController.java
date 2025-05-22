@@ -18,7 +18,7 @@ public class AlbumsController {
             AlbumRest album1 = new AlbumRest();
             album1.setAlbumId("albumIdHere");
             album1.setUserId("1");
-            album1.setAlbumTitle("Album 1 title");
+            album1.setAlbumTitle("Album 100 title");
             album1.setAlbumDescription("Album 1 description");
             album1.setAlbumUrl("Album 1 URL");
 
