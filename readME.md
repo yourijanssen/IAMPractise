@@ -36,12 +36,20 @@ cd IAMPractise
 ### 2. Start Keycloak
 start it on localhost:8080 using: .\kc.bat start-dev
 
-### 3. Start Resource Server
-start it on localhost:8081 using: mvn spring-boot:run
-
-
-### 4. Start Discovery Service
-
 ### 3. Start Discovery Service
+start it on localhost:8010 using: mvn spring-boot:run
 
-### 3. Start Discovery Service
+### 4. Start API Gateway
+start it on localhost:8082 using: mvn spring-boot:run
+
+### 5. Start Resource Server (multiple possible instances)
+start it using: mvn spring-boot:run
+
+### 6. Start Photo Resource Server (multiple possible instances)
+start it using: mvn spring-boot:run
+
+### 7. Start Album Resource Server (multiple possible instances)
+start it using: mvn spring-boot:run
+
+### 8. Start WebApp Client 
+start it on localhost:8087 using: mvn spring-boot:run
