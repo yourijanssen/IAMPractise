@@ -12,6 +12,7 @@
 	<groupId>com.appsdeveloperblog.ws.api</groupId>
 	<artifactId>ApiGateway</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
 	<name>ApiGateway</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>

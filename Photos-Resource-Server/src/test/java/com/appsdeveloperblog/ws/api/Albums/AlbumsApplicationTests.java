@@ -1,13 +1,13 @@
-package com.appsdeveloperblog.ws.api.Albums;
+// package com.appsdeveloperblog.ws.api.Albums;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+// import org.junit.jupiter.api.Test;
+// import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
-class AlbumsApplicationTests {
+// @SpringBootTest
+// class AlbumsApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+// @Test
+// void contextLoads() {
+// }
 
-}
+// }

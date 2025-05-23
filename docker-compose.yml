@@ -1,0 +1,124 @@
+networks:
+  microservices-network:
+    driver: bridge
+
+services:
+  keycloak:
+    build:
+      context: ./Keycloak
+      dockerfile: Dockerfile
+    container_name: keycloak
+    ports:
+      - "8080:8080"
+    environment:
+      - KC_HOSTNAME=localhost
+      - KC_HOSTNAME_STRICT=false
+      - KC_HOSTNAME_STRICT_HTTPS=false
+      - KC_HTTP_ENABLED=true
+      - KC_PROXY=edge
+      - KC_BOOTSTRAP_ADMIN_USERNAME=yourijanssen123@gmail.com
+      - KC_BOOTSTRAP_ADMIN_PASSWORD=Password123
+    networks:
+      - microservices-network
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:8080/health/ready" ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+  eureka:
+    image: "yourijanssen/eureka:iampractise"
+    container_name: eureka-ms
+    ports:
+      - "8010:8010"
+    deploy:
+      resources:
+        limits:
+          memory: 700m
+    networks:
+      - microservices-network
+  api-gateway:
+    image: "yourijanssen/api-gateway:iampractise"
+    container_name: api-gateway-ms
+    ports:
+      - "8082:8082"
+    deploy:
+      resources:
+        limits:
+          memory: 700m
+    depends_on:
+      - eureka
+      - keycloak
+    networks:
+      - microservices-network
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka:8010/eureka
+      # - SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_JWK-SET-URI=http://keycloak:8080/realms/appsdeveloperblog/protocol/openid-connect/certs
+  albums-resource-server:
+    image: "yourijanssen/albums-resource-server:iampractise"
+    container_name: albums-resource-server-ms
+    ports:
+      - "8091:8091"
+    deploy:
+      resources:
+        limits:
+          memory: 700m
+    depends_on:
+      - eureka
+      - keycloak
+      - api-gateway
+    networks:
+      - microservices-network
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka:8010/eureka
+      # - SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_JWK-SET-URI=http://keycloak:8080/realms/appsdeveloperblog/protocol/openid-connect/certs
+  photos-resource-server:
+    image: "yourijanssen/photos-resource-server:iampractise"
+    container_name: photos-resource-server-ms
+    ports:
+      - "8090:8090"
+    deploy:
+      resources:
+        limits:
+          memory: 700m
+    depends_on:
+      - eureka
+      - api-gateway
+    networks:
+      - microservices-network
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka:8010/eureka
+  resource-server:
+    image: "yourijanssen/resource-server:iampractise"
+    container_name: resource-server-ms
+    ports:
+      - "8081:8081"
+    deploy:
+      resources:
+        limits:
+          memory: 700m
+    depends_on:
+      - eureka
+      - api-gateway
+    networks:
+      - microservices-network
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka:8010/eureka
+  webapp-client:
+    image: "yourijanssen/webapp-client:iampractise"
+    container_name: webapp-client-ms
+    ports:
+      - "8087:8087"
+    deploy:
+      resources:
+        limits:
+          memory: 700m
+    depends_on:
+      - eureka
+      - api-gateway
+      - albums-resource-server
+      - photos-resource-server
+      - resource-server
+    networks:
+      - microservices-network
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka:8010/eureka

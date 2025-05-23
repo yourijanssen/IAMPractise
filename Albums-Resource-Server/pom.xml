@@ -12,6 +12,7 @@
 	<groupId>com.appsdeveloperblog.ws.api</groupId>
 	<artifactId>Albums</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
 	<name>Albums</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
